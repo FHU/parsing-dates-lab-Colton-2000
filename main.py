@@ -3,8 +3,8 @@
 def parse_date(user_string):
     if user_string == '-1':
         return
-    date = user_string.replace(',', '')
-    date = date.split()
+    user_string = user_string.replace(',', '')
+    user_string = user_string.split()
     months = {
         'January': '1',
         'February': '2',
@@ -19,14 +19,14 @@ def parse_date(user_string):
         'November': '11',
         'December': '12'
     }
-    month = date[0]
+    month = user_string[0]
     month = months.get(month)
     if len(month) == 1:
         month = '0' + month
-    day = date[1]
+    day = user_string[1]
     if len(day) == 1:
         day = '0' + day
-    year = date[2]
+    year = user_string[2]
     date = month + '/' + day + '/' + year
     print(date)
     parse_date(input())
