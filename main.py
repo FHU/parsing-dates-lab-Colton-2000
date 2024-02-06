@@ -27,7 +27,8 @@ def parse_date(user_string):
     if len(day) == 1:
         day = '0' + day
     year = date[2]
-    print(month, day, year, sep='/')
+    date = month + '/' + day + '/' + year
+    print(date)
     parse_date(input())
 
 #REMOVE PASS AND YOUR CODE GOES HERE
