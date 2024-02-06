@@ -22,7 +22,7 @@ def parse_date(user_string):
         month = months.get(month)
         if len(month) == 1:
             month = '0' + month
-            day = user_string[1]
+        day = user_string[1]
         if len(day) == 1:
             day = '0' + day
         year = user_string[2]
