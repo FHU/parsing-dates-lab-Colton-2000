@@ -21,7 +21,11 @@ def parse_date(user_string):
     }
     month = date[0]
     month = months.get(month)
+    if len(month) == 1:
+        month = '0' + month
     day = date[1]
+    if len(day) == 1:
+        day = '0' + day
     year = date[2]
     print(month, day, year, sep='/')
     parse_date(input())
