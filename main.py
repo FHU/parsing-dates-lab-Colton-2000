@@ -28,7 +28,7 @@ def parse_date(user_string):
         year = user_string[2]
         date = month + '/' + day + '/' + year
         print(date)
-        parse_date(input())
+        user_string = input()
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
