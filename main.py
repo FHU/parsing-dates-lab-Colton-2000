@@ -1,7 +1,7 @@
 #parse_date function should return the date formated as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
 def parse_date(user_string):
-    while user_string != '-1':
+    if user_string != '-1':
         user_string = user_string.replace(',', '')
         user_string = user_string.split()
         months = {
@@ -28,7 +28,9 @@ def parse_date(user_string):
         year = user_string[2]
         date = month + '/' + day + '/' + year
         print(date)
-        user_string = input()
+        return parse_date(input())
+    else:
+        return
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
