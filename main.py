@@ -3,7 +3,8 @@
 def parse_date(user_string):
     if user_string == '-1':
         return
-    date = user_string.split()
+    date = user_string.replace(',', '')
+    date = date.split()
     months = {
         'January': '1',
         'February': '2',
