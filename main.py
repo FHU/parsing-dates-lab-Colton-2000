@@ -30,7 +30,9 @@ def parse_date(user_string):
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
-    string = 0
-    while string != '-1':
+    while True:
         string = input()
-        parse_date(string)
+        if string == '-1':
+            break
+        else:
+            parse_date(string)
